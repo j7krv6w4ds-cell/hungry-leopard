@@ -1,0 +1,97 @@
+:root{
+  --bg-color: #dff3ff;
+  --panel-bg: rgba(255,255,255,0.9);
+  --accent: #2b7a78;
+}
+
+html,body{
+  height:100%;
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  background: linear-gradient(#cfe9ff, #eaf6ff 60%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -ms-touch-action: none;
+  touch-action: none;
+  overscroll-behavior: none;
+}
+
+#game-wrap{
+  position:relative;
+  width:100%;
+  height: calc(100vh - 86px);
+  max-height:100vh;
+  overflow:hidden;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800"><rect fill="%23dff3ff" width="100%25" height="100%25"/><g fill="%23ffffff" opacity="0.98"><path d="M0 600 L200 300 L400 600 Z"/><path d="M350 600 L550 280 L750 600 Z"/><path d="M700 600 L900 260 L1100 600 Z"/></g></svg>');
+  background-size: cover;
+  background-position: center bottom;
+}
+
+canvas{
+  width:100%;
+  height:100%;
+  display:block;
+  touch-action: none;
+}
+
+#hud{
+  position:absolute;
+  left:12px;
+  bottom:12px;
+  display:flex;
+  gap:8px;
+  align-items:center;
+  z-index:10;
+}
+
+#hud button{
+  padding:10px 12px;
+  border-radius:8px;
+  border: none;
+  background: var(--panel-bg);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  font-weight:600;
+  touch-action: manipulation;
+}
+
+#hint{
+  padding:10px 12px;
+  border-radius:8px;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-size:14px;
+  color:#333;
+}
+
+#ui-top{
+  position:fixed;
+  top:8px;
+  left:8px;
+  right:8px;
+  display:flex;
+  justify-content:space-between;
+  z-index:20;
+}
+
+#score, #levelLabel{
+  background:var(--panel-bg);
+  padding:8px 12px;
+  border-radius:10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-weight:700;
+}
+
+#foot{
+  text-align:center;
+  font-size:13px;
+  padding:8px;
+  color:#444;
+}
+
+@media (orientation: portrait) {
+  #hint { font-size:13px; }
+  #hud button { padding:8px 10px; }
+}

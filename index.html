@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Hungry Leopard — Himalayan Sling</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Matter.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/matter-js@0.19.0/build/matter.min.js"></script>
+</head>
+<body>
+  <div id="ui-top">
+    <div id="score">Score: 0</div>
+    <div id="levelLabel">Level: 1</div>
+  </div>
+
+  <div id="game-wrap">
+    <canvas id="game-canvas"></canvas>
+    <div id="hud">
+      <button id="resetBtn">Reset</button>
+      <button id="nextBtn">Next</button>
+      <div id="hint">Drag the snow leopard and release to launch</div>
+    </div>
+  </div>
+
+  <div id="foot">Tip: Play in landscape for best experience. Works on touch and mouse.</div>
+
+  <script src="main.js"></script>
+</body>
+</html>
